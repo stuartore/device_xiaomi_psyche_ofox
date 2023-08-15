@@ -79,8 +79,8 @@ PRODUCT_PACKAGES += \
     android.hardware.boot@1.2-impl-qti \
     android.hardware.boot@1.2-impl-qti.recovery \
     android.hardware.boot@1.2-service \
-    bootctrl.mikona \
-    bootctrl.mikona.recovery
+    bootctrl.kona \
+    bootctrl.kona.recovery
 	
 PRODUCT_PACKAGES_DEBUG += \
     bootctl	

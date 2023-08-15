@@ -39,7 +39,7 @@ if [[ $FOX_BUILD_DEVICE == "psyche" ]]; then
     	export FOX_DELETE_AROMAFM=1
     	export FOX_BUGGED_AOSP_ARB_WORKAROUND="1616300800"; # Sun 21 Mar 04:26:40 GMT 2021
 
-	echo '[psyche]Build Guide: export ALLOW_MISSING_DEPENDENCIES=true && export ALLOW_MISSING_DEPENDENCIES=true && export LC_ALL="C" && lunch twrp_psyche-userdebug && mka adbd bootimage'
+	echo '[psyche]Build Guide: export ALLOW_MISSING_DEPENDENCIES=true && export ALLOW_MISSING_DEPENDENCIES=true && export LC_ALL="C" && lunch twrp_psyche-eng && mka adbd bootimage'
 
 	# instruct magiskboot v24+ to always patch the vbmeta header when patching the recovery/boot image; do *not* remove!
         export FOX_PATCH_VBMETA_FLAG="1"
