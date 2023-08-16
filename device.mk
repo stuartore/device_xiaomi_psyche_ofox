@@ -23,8 +23,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 
 # vendor_boot as recovery
-ifeq ($(FOX_VENDOR_BOOT_RECOVERY),1)
-
+FOX_VENDOR_BOOT_RECOVERY := 1
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
 
 # Enable project quotas and casefolding for emulated storage without sdcardfs
@@ -39,8 +38,6 @@ PRODUCT_PACKAGES += \
     resize2fs.vendor_ramdisk \
     fsck.vendor_ramdisk \
     tune2fs.vendor_ramdisk
-endif
-# end: vendor_boot
 
 # API
 PRODUCT_TARGET_VNDK_VERSION := 31
@@ -140,8 +137,8 @@ RECOVERY_LIBRARY_SOURCE_FILES += \
     $(TARGET_OUT_SYSTEM_EXT_SHARED_LIBRARIES)/libdisplayconfig.qti.so
 
 # OEM otacert
-PRODUCT_EXTRA_RECOVERY_KEYS += \
-    vendor/recovery/security/miui
+#PRODUCT_EXTRA_RECOVERY_KEYS += \
+#    vendor/recovery/security/miui
 
 # device name
 #PRODUCT_PROPERTY_OVERRIDES += \

@@ -13,6 +13,11 @@ DEVICE_PATH=device/xiaomi/psyche
 # Inherit from device
 $(call inherit-product, $(DEVICE_PATH)/device.mk)
 
+# SHRP flags
+ifdef SHRP_DEVICE_CODE
+$(call inherit-product, $(DEVICE_PATH)/shrp_flags.mk)
+endif
+
 # Inherit some common LineageOS stuff.
 $(call inherit-product, vendor/twrp/config/common.mk)
 
